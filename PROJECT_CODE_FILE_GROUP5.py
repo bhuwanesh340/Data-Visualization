@@ -14,18 +14,18 @@ get_ipython().magic('matplotlib inline')
 # In[2]:
 
 #import data
-year_data = pd.read_csv('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\data\\year_wise_data.csv',index_col=0)
+year_data = pd.read_csv('G:\\year_wise_data.csv',index_col=0)
 print(year_data.head())
 
-qtr_arr_data = pd.read_excel('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\data\\qtr_wise_data.xlsx',index_col=0)
+qtr_arr_data = pd.read_excel('G:\\qtr_wise_data.xlsx',index_col=0)
 print(qtr_arr_data.head())
 
 #Combined fta data is the original data set we will be using 
-combined_fta_data = pd.read_excel('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\data\\fta_data.xlsx',index_col=0)
+combined_fta_data = pd.read_excel('G:\\fta_data.xlsx',index_col=0)
 print(combined_fta_data.head())
 
 #Fta month wise data 
-fta_month_wise_data = pd.read_excel('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\data\\year_wise_fta.xlsx',index_col=0)
+fta_month_wise_data = pd.read_excel('G:\\year_wise_fta.xlsx',index_col=0)
 print(fta_month_wise_data.head())
 
 
@@ -58,7 +58,7 @@ x.plot(kind='bar',ax=axes,colormap='PuOr',legend=False)
 # In[5]:
 
 #Read the data
-fta_data =pd.read_excel('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\FILES\\year_wise_ftay.xlsx',index_col=0)
+fta_data =pd.read_excel('G:\\year_wise_ftay.xlsx',index_col=0)
 fta_data.head()
 fig,axes = plt.subplots(nrows=1,ncols=1,sharex=True,sharey=True,figsize=(10,5))
 fta_data.boxplot()
@@ -110,7 +110,7 @@ y.plot(kind='bar',ax=axes,colormap='autumn',legend=False)
 
 # In[10]:
 
-rainfall_data = pd.read_excel('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\FILES\\fta_datay.xlsx',index_col=0)
+rainfall_data = pd.read_excel('G:\\fta_datay.xlsx',index_col=0)
 rainfall_data.head()
 fig,axes = plt.subplots(nrows=1,ncols=1,sharex=True,sharey=True,figsize=(10,5))
 rainfall_data.boxplot()
@@ -167,7 +167,7 @@ y.plot(kind='bar',ax=axes,title="Quarter-wise Temp. data",colormap='bwr',legend=
 # In[24]:
 
 fig,axes = plt.subplots(nrows=1,ncols=1,sharex=True,sharey=True,figsize=(14,5))
-year_temp = pd.read_excel('G:\\NU MATERIAL\\NU-TERM2\\PFA2\\project\\FILES\\year_temp.xlsx',index_col=0)
+year_temp = pd.read_excel('G:\\year_temp.xlsx',index_col=0)
 year_temp.boxplot()
 
 
@@ -211,9 +211,4 @@ kd = combined_fta_data['Rainfall'].plot.kde()
 kd.set_xlabel("Number of FTAs")
 kd.set_ylabel("Density")
 kd.plot(label="Density Plot of Rainfall",legend=False,shade=True, color='r')
-
-
-# In[ ]:
-
-
 
